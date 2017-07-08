@@ -1,8 +1,10 @@
 package session6;
 
-public class MyException extends Exception {
+//User Defined Exception
+//Exception is thrown if a user tries to Withdraw amount if Balance <10000 and there is Insufficient Funds.
+public class BankATMException extends Exception {
 
-	MyException(String str) {
+	BankATMException(String str) {
 		System.out.println("---------------------Message---------------------------");
 		System.out.println(str);
 		System.out.println("---------------------Message---------------------------");
