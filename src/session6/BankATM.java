@@ -12,16 +12,21 @@ public class BankATM {
 		this.balance = balance;
 	}
 	
+	//Method to deposit amount
 	void deposit(double depositAmount){
 		balance = balance + depositAmount;
 		System.out.println("The money deposited is "+depositAmount+" and total balance in the account is "+balance);
 		
 	}
 	
-	void withdraw(double withdraw_Amount) throws MyException{
+	//Method to withdraw Amount
+	void withdraw(double withdraw_Amount) throws BankATMException{
+		 //if balance <10000 throw Exception
 		 if (balance < 10000){
-			 throw new MyException("Please Maintain the Balance of 10000/- for any withdrawal");
-		 }else if (withdraw_Amount > balance){
+			 throw new BankATMException("Please Maintain the Balance of 10000/- for any withdrawal");	 
+		}
+		 // if amount withdrawn is > available balance
+		 else if (withdraw_Amount > balance){
 			 System.out.println("Insufficient Funds - Please enter any Amount <"+balance);
 		 }else{
 			 balance = balance - withdraw_Amount;			 

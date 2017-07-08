@@ -21,7 +21,7 @@ public class Assignment2 {
 		double withdraw_amt = sc.nextDouble();
 		try {
 			bankATM1.withdraw(withdraw_amt);
-		} catch (MyException e) {
+		} catch (BankATMException e) {
 			
 		}
 		bankATM1.display();
